@@ -9,12 +9,18 @@ import {
   DialogContent,
   DialogActions,
   IconButton,
+  Link,
+  ListItemButton,
+  ListItemText,
+  ListItemIcon,
 } from "@mui/material";
 
 import HeroStyle from "./HeroCss";
 import { VECTORELINE } from "../../assets";
 import CV_FILE from "../../assets/images/CV/pdf-sample_0.pdf";
 import typography from "../../theme/typography";
+
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 // Replace these with your actual contact details
 const PHONE_NUMBER = "+919661202830";
@@ -152,6 +158,21 @@ function Hero() {
           </Button>
         </DialogActions>
       </Dialog>
+
+      {/* Social Media Links can be added here in the future if needed. */}
+      <Box>
+       <ListItemButton
+  component="a"
+  href="https://facebook.com/"
+  target="_blank"
+>
+  <ListItemIcon>
+    <FacebookIcon />
+  </ListItemIcon>
+
+  <ListItemText primary="Facebook" />
+</ListItemButton>
+      </Box>
     </Box>
   );
 }
